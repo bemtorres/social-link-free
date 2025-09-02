@@ -14,18 +14,11 @@
 3. **NO** marques "Initialize with README"
 4. Crea el repositorio
 
-### 2. Conectar con GitHub
-```bash
-git remote add origin https://github.com/TU-USUARIO/TU-REPOSITORIO.git
-git branch -M main
-git push -u origin main
-```
-
 ### 3. Actualizar configuración
 Después de crear el repositorio, edita `astro.config.mjs` y cambia:
 ```javascript
-site: 'https://TU-USUARIO.github.io',
-base: '/TU-REPOSITORIO',
+site: 'https://bemtorres.github.io',
+base: '/social-link-free',
 ```
 
 ### 4. Configurar GitHub Pages
@@ -35,7 +28,7 @@ base: '/TU-REPOSITORIO',
 
 ## URL final
 Tu sitio estará disponible en:
-`https://TU-USUARIO.github.io/TU-REPOSITORIO`
+`https://bemtorres.github.io/social-link-free`
 
 ## Archivos importantes creados
 - `.github/workflows/deploy.yml` - Despliegue automático
