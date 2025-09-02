@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LinkCard from '../components/LinkCard.astro';
+
+// Información falsa de ejemplo
+const sampleData = [
+  {
+    title: "Botbee IA",
+    description: "Quieres que un asistente de IA te ayude con algo? Aquí encontrarás los mejores bots para ti. Pueden ser generales, específicos o personalizados. <br> Contacto <strong>benjamin@nomed.org</strong>",
+    image: "https://res.cloudinary.com/diytuytti/image/upload/v1756803080/1756800393_g6oiw7.png",
+    links: [
+      { name: "Pedro Pascal Wikibot", url: "https://botbee.nomed.org/chat/test_hubdox/document/6x190423d2-b6fb-4241-a63d-c84f1d2c77dc", icon: "🐙" },
+      { name: "Bad Bunny Wikibot", url: "https://botbee.nomed.org/chat/test_hubdox/document/6x0d68ff27-a285-4d19-a95d-0bf1353046a4", icon: "🎨" },
+      { name: "Marcianeke Wikibot", url: "https://botbee.nomed.org/chat/test_hubdox/document/6x3699869d-7652-4c2c-b657-7daadeaa2de1", icon: "✨" },
+      { name: "Arturo Prat IA", url: "https://botbee.nomed.org/chat/test_hubdox/document/6xc9af7484-7076-4929-8739-88fe62566cde", icon: "🤖" },
+      { name: "Ley Karin Chatbot", url: "https://botbee.nomed.org/chat/test_hubdox/document/6x656b5ac3-342f-462f-9708-c425c6179d06", icon: "✨" }
+    ]
+  },
+  // {
+  //   title: "Blog de Tecnología",
+  //   description: "Artículos sobre las últimas tendencias en desarrollo web, tutoriales de programación y análisis de herramientas modernas.",
+  //   image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=300&fit=crop",
+  //   links: [
+  //     { name: "Medium", url: "https://medium.com", icon: "📝" },
+  //     { name: "Dev.to", url: "https://dev.to", icon: "💻" },
+  //     { name: "Hashnode", url: "https://hashnode.com", icon: "📰" },
+  //     { name: "RSS Feed", url: "https://rss.example.com", icon: "📡" }
+  //   ]
+  // },
+  // {
+  //   title: "Recursos de Diseño",
+  //   description: "Herramientas, plantillas y recursos gratuitos para diseñadores. Paletas de colores, fuentes, iconos y más.",
+  //   image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&h=300&fit=crop",
+  //   links: [
+  //     { name: "Figma", url: "https://figma.com", icon: "🎯" },
+  //     { name: "Dribbble", url: "https://dribbble.com", icon: "🏀" },
+  //     { name: "Unsplash", url: "https://unsplash.com", icon: "📸" },
+  //     { name: "Iconos", url: "https://icons.example.com", icon: "🔗" }
+  //   ]
+  // },
+  // {
+  //   title: "Cursos Online",
+  //   description: "Plataformas donde puedes encontrar cursos de programación, diseño y desarrollo de habilidades digitales.",
+  //   image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=300&fit=crop",
+  //   links: [
+  //     { name: "Udemy", url: "https://udemy.com", icon: "🎓" },
+  //     { name: "Coursera", url: "https://coursera.org", icon: "📚" },
+  //     { name: "Platzi", url: "https://platzi.com", icon: "🚀" },
+  //     { name: "YouTube", url: "https://youtube.com", icon: "📺" }
+  //   ]
+  // }
+];
+---
+
+<Layout title="Sistema de Enlaces Minimalista">
+  <div class="max-w-4xl mx-auto">
+    <!-- Header -->
+    <!-- <div class="text-center mb-12">
+      <h1 class="text-4xl font-light text-gray-900 mb-4">
+        Enlaces Esenciales
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Una colección minimalista de recursos y enlaces importantes, organizados de manera clara y accesible.
+      </p>
+    </div> -->
+
+    <!-- Link Cards -->
+    <div class="space-y-8">
+      {sampleData.map((item) => (
+        <LinkCard 
+          title={item.title}
+          description={item.description}
+          image={item.image}
+          links={item.links}
+        />
+      ))}
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center mt-16 pt-8 border-t border-gray-200">
+      <p class="text-sm text-gray-500">
+        <a href="http://github.com/bemtorres">Bemtorres</a> - 2025
+      </p>
+    </div>
+  </div>
+</Layout>

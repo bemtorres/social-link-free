@@ -1,0 +1,61 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  image: string;
+  links: Array<{
+    name: string;
+    url: string;
+    icon?: string;
+  }>;
+}
+
+const { title, description, image, links } = Astro.props;
+
+---
+
+<div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6 hover:shadow-md transition-shadow duration-200">
+  <!-- Imagen -->
+  <div class="justify-center items-center mb-4">
+    <img 
+      src={image} 
+      alt={title}
+      class="w-48 h-48 mx-auto object-cover rounded-full shadow-lg"
+    />
+  </div>
+  
+  <!-- Título y descripción -->
+  <div class="mb-6 text-center items-center">
+    <h1 class="text-2xl font-semibold text-gray-900 mb-2">{title}</h1>
+    <p class="text-gray-600 leading-relaxed" set:html={description}></p>
+  </div>
+  
+  <!-- Enlaces -->
+  <div class="space-y-3">
+    {links.map((link) => (
+      <a 
+        href={link.url} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="flex items-center justify-between text-lg p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors duration-200 group"
+      >
+        <div class="flex items-center space-x-4">
+          {link.icon && (
+            <span class="text-lg">{link.icon}</span>
+          )}
+          <span class="font-medium text-gray-700 group-hover:text-gray-900">
+            {link.name}
+          </span>
+        </div>
+        <svg 
+          class="w-4 h-4 text-gray-400 group-hover:text-gray-600" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+      </a>
+    ))}
+  </div>
+</div>
