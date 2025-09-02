@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://tu-usuario.github.io',
-  base: '/tu-repositorio',
+  site: 'https://bemtorres.github.io',
+  base: '/social-link-free',
   integrations: [tailwind()],
 });

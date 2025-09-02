@@ -16,7 +16,7 @@ Un sistema elegante y minimalista para organizar y mostrar enlaces importantes, 
 
 ## 🚀 Demo en vivo
 
-[Ver demo en GitHub Pages](https://tu-usuario.github.io/tu-repositorio)
+[Ver demo en GitHub Pages](https://bemtorres.github.io/social-link-free)
 
 ## 🛠️ Tecnologías utilizadas
 
